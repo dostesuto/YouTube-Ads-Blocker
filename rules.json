@@ -1,0 +1,66 @@
+[
+    {
+      "id": 1,
+      "action": {
+        "type": "block"
+      },
+      "condition": {
+        "urlFilter": "||youtube.com/yts/jsbin/www-pagead-id-"
+      }
+    },
+    {
+      "id": 2,
+      "action": {
+        "type": "block"
+      },
+      "condition": {
+        "urlFilter": "||googleads.g.doubleclick.net^"
+      }
+    },
+    {
+      "id": 3,
+      "action": {
+        "type": "block"
+      },
+      "condition": {
+        "urlFilter": "||youtube.com/get_midroll_"
+      }
+    },
+    {
+      "id": 4,
+      "action": {
+        "type": "block"
+      },
+      "condition": {
+        "urlFilter": "||pagead2.googlesyndication.com^"
+      }
+    },
+    {
+      "id": 5,
+      "action": {
+        "type": "block"
+      },
+      "condition": {
+        "urlFilter": "||youtube.com/pagead/"
+      }
+    },
+    {
+      "id": 6,
+      "action": {
+        "type": "block"
+      },
+      "condition": {
+        "urlFilter": "||google.co.jp/pagead/lvz?"
+      }
+    },
+    {
+      "id": 7,
+      "action": {
+        "type": "block"
+      },
+      "condition": {
+        "urlFilter": "||static.doubleclick.net/instream/ad_status.js"
+      }
+    }
+  ]
+  
