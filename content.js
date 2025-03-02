@@ -27,6 +27,21 @@ function removeAds() {
             console.log(`Removed: ${selector}`);
         });
     });
+    
+    // 広告削除後にレイアウト調整
+    adjustLayout();
+}
+
+// 広告削除後に隙間を埋めるためのレイアウト調整関数
+function adjustLayout() {
+    const containers = document.querySelectorAll('ytd-rich-grid-renderer, ytd-video-renderer, ytd-item-section-renderer');
+    
+    containers.forEach(container => {
+        // Flexboxを適用して、要素を詰める
+        container.style.display = 'flex';
+        container.style.flexWrap = 'wrap';
+        container.style.gap = '10px'; // 必要に応じて間隔を調整
+    });
 }
 
 // ページ読み込み時と、一定間隔ごとに広告を非表示にする
