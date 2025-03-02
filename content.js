@@ -12,7 +12,9 @@ const youtubeAdsSelectors = [
     "#masthead-ad",
     ".ytd-search-pyv-renderer",
     ".pyv-afc-ads-container",
-    ".iv-promo"
+    ".iv-promo",
+    "ytd-in-feed-ad-layout-renderer",
+    "ytd-rich-item-renderer[is-in-first-column]"
 ];
 
 // 指定した要素をすべて非表示にする関数
