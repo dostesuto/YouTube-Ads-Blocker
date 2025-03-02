@@ -14,7 +14,9 @@ const youtubeAdsSelectors = [
     ".pyv-afc-ads-container",
     ".iv-promo",
     "ytd-in-feed-ad-layout-renderer",
-    "ytd-rich-item-renderer[is-in-first-column]"
+    "ytd-rich-item-renderer[is-in-first-column]",
+    "ytd-statement-banner-renderer", // 新しく追加されたセレクター
+    "#big-yoodle" // 新しく追加されたセレクター
 ];
 
 // 指定した要素をすべて非表示にする関数
