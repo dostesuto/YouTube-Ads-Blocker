@@ -1,22 +1,30 @@
 // content.js
+
+// 無効な `youtube.com##` を削除し、正しい CSS セレクターに変更
 const youtubeAdsSelectors = [
-    "youtube.com##.ad-container",
-    "youtube.com##.ytp-ad-progress-list",
-    "youtube.com###player-ads",
-    "youtube.com##ytd-rich-item-renderer:has( > div > ytd-display-ad-renderer )",
-    "youtube.com##ytd-ad-slot-renderer",
-    "youtube.com##ytd-promoted-sparkles-web-renderer",
-    "youtube.com##ytd-carousel-ad-renderer",
-    "youtube.com###masthead-ad",
-    "youtube.com##.ytd-search-pyv-renderer",
-    "youtube.com##.pyv-afc-ads-container",
-    "youtube.com##.iv-promo"
-  ];
-  
-  youtubeAdsSelectors.forEach(selector => {
-    const element = document.querySelector(selector);
-    if (element) {
-      element.style.display = 'none';
-    }
-  });
-  
+    ".ad-container",
+    ".ytp-ad-progress-list",
+    "#player-ads",
+    "ytd-rich-item-renderer:has( > div > ytd-display-ad-renderer )", // *:has() はまだ一部のブラウザで非対応
+    "ytd-ad-slot-renderer",
+    "ytd-promoted-sparkles-web-renderer",
+    "ytd-carousel-ad-renderer",
+    "#masthead-ad",
+    ".ytd-search-pyv-renderer",
+    ".pyv-afc-ads-container",
+    ".iv-promo"
+];
+
+// 指定した要素をすべて非表示にする関数
+function removeAds() {
+    youtubeAdsSelectors.forEach(selector => {
+        document.querySelectorAll(selector).forEach(element => {
+            element.style.display = 'none';
+            console.log(`Removed: ${selector}`);
+        });
+    });
+}
+
+// ページ読み込み時と、一定間隔ごとに広告を非表示にする
+document.addEventListener("DOMContentLoaded", removeAds);
+setInterval(removeAds, 2000); // 2秒ごとにチェック（広告の再表示を防ぐ）
